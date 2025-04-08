@@ -18,12 +18,6 @@ def contato():
 def login():
   return render_template('login.html')
 
-@app.route('/autenticar', methods=['GET'])
-def autenticar():
-  usuario = request.args.get('usuario')
-  senha = request.args.get('senha')
-  return "usuário {} senha {}" .format(usuario, senha)
-
 @app.route('/aplicativo')
 def aplicativo():
   resultado = minha_aplicacao()
